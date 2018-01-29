@@ -1,5 +1,5 @@
 # The files and folders listed here will NOT be tracked by git
-guide.md
+guide/
 
 # Mac Droppings
 */.DS_Store
