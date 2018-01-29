@@ -35,13 +35,12 @@
     - Assignments, Quizzes, Grading
       - In Canvas: "Modules", also check out the Calendar and its agenda view
       - Percentage Breakdown:
-        - Attendance (10%)
+        - Professionalism (30%)
         - Prework (5%)
-        - Readings/Discussions + Learning Journals (10%)
-        - Labs (30%)
-        - Quizzes twice a week (W, F) (10%)
-        - Final Project + Exam (30%)
-        - Surveys (5%)
+        - Readings/Discussions + Learning Journals (5%)
+        - Labs (25%)
+        - Final Project (25%)
+        - Exam (10%)
       - TA's will do the bulk of the grading; SJ will read/grade learning journals
       - Readings and discussions
         - Don't expect to absorb 100% of what you read. Instead, take note of where to find information in your books so you can refer back to them: the dark pages especially tend to be helpful.
