@@ -7,7 +7,9 @@
 
 ## Schedule
 1. Welcome! Class overview and introductions
+1. Personal and Professional Development
 1. Your new tools
+1. Demo: Start tracking a git repo
 1. Demo: Build a website
 1. Lab Prep
 
@@ -53,6 +55,8 @@
         - 90% or more final grade
         - 70% or more on the entrance exam (at the end of week 3)
         - instructor approval
+
+- Personal and Professional Development
 
 - Your new tools!
   - Terminal
