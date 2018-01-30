@@ -15,6 +15,7 @@
 
 #### Announcements:
 - Quiz percentage of your grade: part of pre-work (so total of 5%)
+- Check in: how'd the lab go? Any specific pain points?
 
 ## Learning Objectives
 - Store and access data using arrays.
@@ -31,12 +32,14 @@
     - have properties that tell us about it and methods that do things to or with it
         - `.length`
         - `.push()`, `.pop()`, `.splice()`
-        - Documentation for these are on MDN!
+        - Documentation for these are on MDN! They provide examples of how to use them. 
   - Operators: manipulate and create new data
+    - arithmetic operations: =, -, 
     - comparing two values with `==` and `===`
-    - comparing multiple values with `&&` and `||`
+    - comparing two values with `<`, `<=`, `>` and `>=`
+    - comparing two values with `&&` and `||`
     - "evaluating an expression"
-  - Control Flow: run or avoid code based on data
+  - Control Flow: run or avoid code based on a condition
     - if and if/else statements
     - switch statements
 
@@ -52,7 +55,7 @@
     - not semantic but still highly useful!
         - div
         - span
-  - attributes provide meta information about an element
+  - attributes provide meta information to or about an element
     - `<p class="highlight">` (attribute-name="value")
     - global vs element specific
         - id, class, contenteditable
@@ -77,6 +80,7 @@
 - Demo: Add to our demo from yesterday
     - Give different alerts and/or prompts depending on a user's answers
     - Save all their answers in an array
+    - Lint our JS file!
 
 - Lab Prep
   - Project file structure:
