@@ -4,16 +4,41 @@
         <title>Hello World?</title>
     </head>
     <body>
-        <section>
-            <h1>Hello World!</h1>
-            <p>This is a paragraph.</p>
-        </section>
-        <section>
-            <h2>Let's Chat</h2>
-            <p>What's your name?</p>
-            <p>What is your favorite dessert?</p>
-            <p>How many countries have you visited?</p>
-        </section>
+        <!-- TODO replace divs with semantic tags -->
+        <div>
+            <div>
+                <p>Link A</p>
+                <p>Link B</p>
+            </div>
+        </div>
+        
+        <div>
+            <div>
+                <h1>Hello World!</h1>
+                <div>
+                    <h2>About this site</h2>
+                    <p>This is a paragraph.</p>
+                </div>
+                <div>
+                    <h2>About Me</h2>
+                    <p>
+                        I went to the zoo on Sunday and saw <span>a bunch of animals</span>! 
+                        In order, my favorites were: the flamingoes, the river otters, the tiger, and the chimpanzee.
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <h2>Let's Chat</h2>
+                <p>What's your name?</p>
+                <p>What is your favorite dessert?</p>
+                <p>How many countries have you visited?</p>
+            </div>
+        </div>
+
+        <div>
+            <p>&copy; SJC 2018</p>
+        </div>
         <!-- TODO move our JS to its own file so it's not cluttering up our HTML -->
         <script>
             // TODO save all the answers in an array and console it out at the end of our script
