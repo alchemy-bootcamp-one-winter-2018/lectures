@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello World?</title>
+    </head>
+    <body>
+        <section>
+            <h1>Hello World!</h1>
+            <p>This is a paragraph.</p>
+        </section>
+        <section>
+            <h2>Let's Chat</h2>
+            <p>What's your name?</p>
+            <p>What is your favorite dessert?</p>
+            <p>How many countries have you visited?</p>
+        </section>
+        <!-- TODO move our JS to its own file so it's not cluttering up our HTML -->
+        <script>
+            // TODO save all the answers in an array and console it out at the end of our script
+            // TODO if their name is Louis, tell them they're great
+            // TODO if their name starts with an S, yell it back at them
+            const name = prompt('What is your name?');
+            console.log('their name is: ' + name);
+            
+            // TODO if they like fries, ask who has the best fries: LBB or Burgerville
+            // TODO allow them to enter "lbb" or "LBB" or "Little Big Burger"
+            // TODO give different responses based on their selection
+            const likesFries = confirm('Do you like french fries?');
+            console.log('likes fries: ' + likesFries);
+        </script>
+    </body>
+</html>
