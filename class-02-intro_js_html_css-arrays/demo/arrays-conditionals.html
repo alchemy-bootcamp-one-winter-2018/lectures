@@ -17,34 +17,180 @@
             <p>Allow us to control what code runs based on certain data.</p>
         </section>
         <script>
-            /* 1. Arrays
-                - creating arrays
-                - adding elements to an array
-                - properties and methods of an array
-                - accessing elements in an array
-            */
 
-            /* Bonus: String methods! */
+            // let wantsToSee = prompt('Pick a demo: array or logic');
+            // wantsToSee = wantsToSee.toLowerCase();
+
+            const wantsToSee = prompt('Pick a demo: array or logic').toLowerCase();
+            console.log('they want to see:' + wantsToSee);
+
+            if (wantsToSee.toLowerCase() === 'array') {
+
+                /* 1. Arrays
+                    - creating arrays
+                    - adding elements to an array
+                    - properties and methods of an array
+                    - accessing elements in an array
+                */
+
+                const seal = 'Hank';
+                const seal1 = 'Sally';
+                const seal2 = 'George';
+
+                const seals = ['Hank','Sally','George'];
+                const numbers = [5,4,3,2,100];
+                const dataTypes = ['a string', 4000, true, null, undefined];
+
+                alert(seals);
+
+                // property gives us info about this thing
+                console.log('seals length is: ' + seals.length);
+
+                // methods let us affect the data of the array
+                console.log('before:' + seals);
+
+                seals.push('Francine'); // adds 'Francine' to the end of the array
+                // console.log('after push:' + seals);
+                
+                seals.pop(); // removes the last item in an array
+                console.log('after pop:' + seals);
+
+                seals.pop();
+                console.log('after pop:' + seals);
+
+                seals.push('George 2', 'Gina', 'Alice');
+                console.log('after big push:' + seals);
+
+                console.log(seals.includes('Paul'));
+                console.log(seals.includes('Sally'));
+
+                console.log('our seals are here ' + seals);
+                seals.splice(4,1); // splice will remove an item at a given index
+                console.log('seals after a splice ' + seals);
 
 
-            /* 2. Operators
-                - arithmetic
-                - comparison
-                - logical
-            */
-            
-            /* Evaluating an expression
-                - what data does this code reference? become? provide?
-            */
+                // we can access specific elements by index
+                // ['a','b','c','d','e'];
+                //   0   1   2   3   4
 
+                // Hank, Sally, George 2, Gina
+                console.log(seals[1]); // gives us Sally
+                console.log(seals[2]); // gives us George 2
 
-            /* 3. Conditional Statements
-                - if statements
-                - if/else statements
-                - if/else if statements
-                - switch statements
-            */
-            
+                seals.push('Sally', 'Polly', 'Jenny', 'Sally');
+                console.log('sally has an index of: ' + seals.indexOf('Sally'));
+
+                /* Bonus: String methods! */
+                // seals.toUpperCase(); // fails
+                console.log('george'.toUpperCase());
+                console.log(seals[1].toUpperCase());
+
+                console.log(seals);
+                console.log(seals[seals.indexOf('Polly')].toUpperCase());
+
+                
+                /* Evaluating an expression
+                    - what data does this code reference? become? provide?
+                */
+
+                /*
+                    seals[seals.indexOf('Polly')].toUpperCase()
+                    seals[5].toUpperCase()
+                    'Polly'.toUpperCase()
+                    'POLLY'
+                */
+
+            } else if (wantsToSee === 'logic') {
+
+                /* 2. Operators
+                    - arithmetic
+                    - comparison
+                    - logical
+                */
+
+                console.log(500 + 2); // 502
+                console.log(500 - 2); // 498
+                console.log(500 / 2); // 250
+                console.log(500 * 2); // 1000
+                console.log(500 % 2); // 0
+                console.log(501 % 2); // 1
+
+                const milesCommuted = [20,5,14];
+
+                const flamingo = 'Jo';
+                console.log(flamingo + 'hn');
+
+                const monkeys = 'Harold';
+                console.log(monkeys + 5);
+
+                // > < >= <= == ===
+                console.log(500 > 2); // true
+
+                const moleRats = 50;
+                const ducks = 22;
+
+                console.log(moleRats < ducks); // false
+                console.log(ducks <= 22); // true
+
+                // console.log('moleRats == ducks ' + moleRats == ducks);
+                console.log('moleRats == ducks ' + (moleRats == ducks));
+
+                console.log(5 == '7'); // false
+                
+                console.log(5 == '5'); // true
+                console.log(5 === '5'); // false
+
+                // && ||
+                // true false
+                // falsey values: null undefined 0 "" false NaN
+                const truth = (true && true);
+                console.log('true && true: ' + truth);
+
+                const truth2 = true && false;
+                console.log('true && false: ' + truth2);
+
+                const truth3 = 'string' && false;
+                console.log('"string" && false: ' + truth3);
+
+                const truth4 = '' || false;
+                console.log('"" || false: ' + truth4);
+                
+
+                /* 3. Conditional Statements
+                    - if statements
+                    - if/else statements
+                    - if/else if statements
+                    - switch statements
+                */
+
+                const plants = 7;
+                const dogs = 1;
+                if (plants > 3) {
+                    alert('You need more plants');
+                } 
+
+                if (plants < 3) {
+                    alert('You really need more plants');
+                }
+
+                if (plants > 3) {
+                    console.log('has more than 3 plants');
+                } else {
+                    console.log('has less than 3 plants');
+                }
+
+                if (plants > 3) {
+                    console.log('> 3');
+                } else if (plants === 3) {
+                    console.log('is 3!');
+                } else {
+                    console.log('< 3');
+                }
+
+            } else {
+                alert('you didn\'t pick one');
+            }
+
         </script>
     </body>
 </html>
