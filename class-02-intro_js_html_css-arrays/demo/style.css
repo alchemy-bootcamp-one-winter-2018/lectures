@@ -1,0 +1,32 @@
+body {
+    color:yellow;
+}
+
+header {
+    color: black;
+}
+
+article {
+    background-color: red;
+}
+
+#questions {
+    background-color: white;
+    color: black;
+}
+
+.highlight {
+    background-color: purple;
+}
+
+p.highlight {
+    font-size: 26px;
+}
+
+#questions p.highlight {
+    color: white;
+}
+
+nav p {
+    display: inline;
+}
