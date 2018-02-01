@@ -71,3 +71,14 @@ Note: Before starting these steps, make sure that both of your repositories are 
 
 > Assignments that do not meet the required professional standards will not be graded. We’ll ask you to update your work to meet the requirements and resubmit. Required professional standards include:
 a clear commit history with commit messages that describe why the changes were made; your code passes an eslint test.
+
+## Pairs for this lab
+
+- Victor & Spencer
+- Ryan Manro & Mario
+- Henrique & Jen
+- Nathan & Valerie & Stacy
+- Stephanie & Tasha
+- Steele & Ryan Lee
+- Keli & William
+
