@@ -1,0 +1,55 @@
+/* cascading */
+nav ul {
+    padding: 0;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+nav li {
+    list-style: none;
+    display: inline;
+    padding: 10px 10px;
+    background-color: red;
+}
+
+nav li:hover {
+    background-color: purple;
+}
+
+a[href="#about-us"] {
+    color: white;
+}
+
+a:hover {
+    font-size: 20px;
+}
+
+nav li {
+    background-color: blue;
+}
+
+
+/* inheritance */
+#about-us {
+    text-align: center;
+}
+
+#about-us h1 {
+    text-align: right;
+}
+
+
+
+/* specificity rules */
+
+section {
+    border: solid black 1px;
+}
+
+.bird {
+    border: solid black 7px;
+}
+
+#flamingo {
+    border: solid black 12px;
+}
