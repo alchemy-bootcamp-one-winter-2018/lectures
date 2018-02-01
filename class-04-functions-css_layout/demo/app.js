@@ -24,6 +24,15 @@ function whisperThis(whateverWeWant) {
     console.log(whateverWeWant);
 }
 
+
+/*
+    the function below has the following parts:
+        - keyword "function" to declare it
+        - a name: add
+        - a list of parameters: (number, otherNumber)
+        - a block of code to run: { // code and stuff }
+*/
+
 function add(number, otherNumber) {
     // would add number and otherNumber
     for (let i = 0; i < number; i++) {
@@ -37,9 +46,9 @@ const sum = add(2,8);
 console.log('the sum is: ' + sum);
 
 // add(17,90);
-
-
 // const hi = prompt('hey');
+
+
 
 function shout(word) {
     let newWord = 'ahhhh' + word;
