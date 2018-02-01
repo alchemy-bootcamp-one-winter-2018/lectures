@@ -1,8 +1,21 @@
+* {
+    border: dotted red 1px;
+}
+
+h1 {
+    width: fit-content;
+    margin: 0 auto;
+}
+
 /* cascading */
 nav ul {
     padding: 0;
     margin: 0 auto;
     width: fit-content;
+}
+
+nav li {
+    background-color: blue;
 }
 
 nav li {
@@ -24,26 +37,15 @@ a:hover {
     font-size: 20px;
 }
 
-nav li {
-    background-color: blue;
-}
 
 
-/* inheritance */
-#about-us {
-    text-align: center;
-}
-
-#about-us h1 {
-    text-align: right;
-}
 
 
 
 /* specificity rules */
 
 section {
-    border: solid black 1px;
+    border: solid black 5px;
 }
 
 .bird {
@@ -52,4 +54,12 @@ section {
 
 #flamingo {
     border: solid black 12px;
+}
+
+#exhibits section {
+    border-style: dotted;
+}
+
+#exhibits article section {
+    border-style: dashed;
 }
