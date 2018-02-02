@@ -39,6 +39,8 @@ main {
     padding-top: 150px;
     z-index: 1;
     background-color: rgba(20,100,200,.5);
+    /* background-color: hsla(195, 53%, 79%, 1);
+    background-color: #add8e6; */
 }
 
 main aside,
@@ -52,6 +54,40 @@ main section {
     vertical-align: top;
 }
 
+/*  asides  */
+main aside {
+    position: sticky;
+    width: 250px;
+    min-height: 400px;
+    top: 80px;
+    
+    padding: 10px;
+
+    background-color: rgba(255,255,255,1);
+}
+
+aside img {
+    max-width: 100%;
+}
+
+aside figure {
+    margin: 0;
+    border: 8px inset gray;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+    background-color: rgba(255,255,255,1);
+}
+
+aside li {
+    margin: 2px;
+    padding: 5px;
+    border: 1px gray solid;
+}
+
+/* tweet-esque cards */
 .card {
     border-color: red;
 
@@ -91,27 +127,4 @@ main section {
     bottom: 10px;
     right: 10px;
     color: rgba(0,0,0,.5);
-}
-
-main aside {
-    position: sticky;
-    width: 250px;
-    height: 400px;
-    top: 80px;
-    
-    padding: 10px;
-
-    background-color: rgba(255,255,255,1);
-}
-
-aside ul {
-    list-style: none;
-    padding: 0;
-    background-color: rgba(255,255,255,1);
-}
-
-aside li {
-    margin: 2px;
-    padding: 5px;
-    border: 1px gray solid;
 }

@@ -55,6 +55,7 @@
             - hex values: `#RRGGBB`
             - rgba values: `rgba(red,green,blue,alpha)`
             - hsla values: `hsla(hue, saturation%, lightness%, alpha)`
+        - http://hslpicker.com
         - color pallet resources:
             - https://coolors.co/
             - http://paletton.com/
