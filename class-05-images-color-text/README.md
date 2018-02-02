@@ -26,6 +26,9 @@
 
 ### Notes
 - Code Review
+    - Tasha's: https://github.com/Tashazun/About-me/pull/4
+    - Steele/Ryan's:
+    https://github.com/SteeleWalston/ACL-bootcampWeek1/pull/1
 
 - HTML: images and figures
     - the img tag

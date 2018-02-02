@@ -9,6 +9,7 @@ html, body {
 }
 
 header {
+    /* TODO fix at top of page */
     position: fixed;
     width: 100%;
 
@@ -17,30 +18,29 @@ header {
 }
 
 nav ul {
-    /* padding: 0;
-    margin: 0 auto;
-    width: fit-content; */
+    /* TODO use flexbox instead*/
 
-    width: 50%;
-    margin: 20px auto;
+    padding: 0;
+    margin: 0 auto;
+    /* width: fit-content; */
     display: flex;
+
     justify-content: space-around;
+    align-items: center;
+    height: 100px;
 }
 
 nav li {
     list-style: none;
-    /* list-style: none;
-    display: inline-block;
-    padding: 10px 10px; */
+    padding: 10px 10px;
+    /* display: inline-block; */
 }
 
 main {
     text-align: center;
     padding-top: 150px;
-    z-index: 1;
-    background-color: rgba(20,100,200,.5);
-    /* background-color: hsla(195, 53%, 79%, 1);
-    background-color: #add8e6; */
+    /* background-color: #FF00FF; */
+    background-color: rgb(50,20,200);
 }
 
 main aside,
@@ -48,37 +48,27 @@ main section {
     border-color: orange;
 
     min-height: 100px;
-    display: inline-block;
-    
     margin: 0 10px;
+
+    display: inline-block;
     vertical-align: top;
 }
 
 /*  asides  */
 main aside {
-    position: sticky;
     width: 250px;
     min-height: 400px;
-    top: 80px;
     
     padding: 10px;
+    position: sticky;
+    top: 120px;
 
-    background-color: rgba(255,255,255,1);
-}
-
-aside img {
-    max-width: 100%;
-}
-
-aside figure {
-    margin: 0;
-    border: 8px inset gray;
+    background-color: hsla(60,100%,50%,.8);
 }
 
 aside ul {
     list-style: none;
     padding: 0;
-    background-color: rgba(255,255,255,1);
 }
 
 aside li {
@@ -87,44 +77,33 @@ aside li {
     border: 1px gray solid;
 }
 
+aside figure img {
+    width: 100%;
+}
+
 /* tweet-esque cards */
 .card {
     border-color: red;
 
-    height: 200px;
+    min-height: 200px;
     width: 400px;
-    margin: 50px auto;
     position: relative;
-    
-    text-align: left;
-    border: 1px solid #add8e6;
-    background-color: rgba(255,255,255,1);
-}
 
-.card:first-child {
-    margin-top: 0;
-}
-
-.avatar {
-    position: absolute;
-    top: 20px;
-    left: 30px;
-
-    height: 30%;
-}
-
-.card h1 {
-    padding-left: 30%;
+    background-color: rgba(255,255,255,.8);
 }
 
 .card p {
-    margin-top: 75px;
-    padding-left: 10px;
+    margin-top: 80px;
 }
 
 .card time {
     position: absolute;
     bottom: 10px;
     right: 10px;
-    color: rgba(0,0,0,.5);
+}
+
+.avatar {
+    position: absolute;
+    left: 10px;
+    top: 10px;
 }
