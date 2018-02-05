@@ -10,7 +10,7 @@
 1. Lab Prep
 
 ### Announcements
-* One on ones w/ SJ! Today and tomorrow: 15 minutes to check in with where you're at.
+* One on ones w/ SJ! Today and tomorrow: 10 minutes to check in with where you're at.
 
 ## Learning Objectives
 * Translate a problem domain into understandable TODOs and user stories.
