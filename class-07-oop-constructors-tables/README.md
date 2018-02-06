@@ -22,6 +22,10 @@
     * More CSS labs: this week!
     * TA Andrew and TA Erdem are stellar, super helpful at giving nudges/pointing direction/letting you struggle
 * Continuing one on ones!
+* revise lab 6:
+    - move day's info to day md / separate week's goals
+    - rearrange list of steps
+        - "incorrectly specific"
 
 ## Learning Objectives
 - Translate an object literal into a constructor function. 

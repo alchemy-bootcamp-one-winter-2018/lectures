@@ -2,14 +2,59 @@
 <html>
     <head>
         <title>Books</title>
-        <style></style>
+        <style>
+            section {
+                /* border: solid 1px blue; */
+            }
+
+            td {
+                border: dotted 1px red;
+            }
+        </style>
     </head>
     <body>
-        <h1>Books To Read</h1>
-        <ul id="to-read"></ul>
-        
-        <h1>Books Read</h1>
-        <ul id="read"></ul>
+        <section>
+            <h1>Questions</h1>
+            <section id="yes-questions"></section>
+            <section id="other-questions">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>question</th>
+                            <th>answer</th>
+                            <th>category</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>???</td>
+                            <td>yes</td>
+                            <td>other</td>
+                        </tr>
+                        <tr>
+                            <td>second question</td>
+                            <td>no</td>
+                            <td>yes</td>
+                        </tr>
+                    </tbody>
+                    <tfoot></tfoot>
+                </table>
+            </section>
+        </section>
+        <section>
+            <h1>Books</h1>
+            <table id="books-table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Read</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+        </section>
         <script src="app.js"></script>
     </body>
 </html>
