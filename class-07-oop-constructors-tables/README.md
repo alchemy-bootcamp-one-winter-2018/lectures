@@ -35,6 +35,7 @@
 
 ## Notes
 * Code Review
+    * [PR to Stephanie's Cookies](https://github.com/stephaniesmith/cookies/pull/1)
 * More OOP, now with constructor functions
     * constructor function
         * a factory to create our objects so the computer does the work for us
