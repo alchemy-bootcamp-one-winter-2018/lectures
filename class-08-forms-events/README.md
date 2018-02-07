@@ -25,7 +25,8 @@
 - Update the DOM using user input.
 
 ## Notes
-* Code Review
+* Exercise
+    * SJ's solution: https://repl.it/@sajoy/WordyWiltedBuckeyebutterfly
 * HTML forms
     * Use form elements to collect/capture information from a user
         * text data, choices, actions

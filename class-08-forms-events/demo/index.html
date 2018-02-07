@@ -20,8 +20,41 @@
         </style>
     </head>
     <body>
+        <!-- <h1 onClick="cat();">SO MANY CATS</h1> -->
+        <h1 id="cats">SO MANY CATS</h1>
+
+
+        <!-- TODO build a form! -->
+        <form>
+            <fieldset>
+                <legend>New Post Information</legend>
+
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" maxlength="5" required placeholder="Title">
+
+                <!-- <label for="content">Write Stuff</label>
+                <input type="text" name="content" id="content"> -->
+                <label for="content">Content</label>
+                <textarea id="content" name="text" required>
+                    Hello!
+                </textarea>
+
+                <!-- <label for="tags">Tags (separate by comma)</label>
+                <input type="text" name="tags" id="tags">  -->
+
+                <label for="cat-tag">cat</label>
+                <input type="checkbox" name="tags" id="cat-tag" value="cat" checked>
+
+                <label for="lorem-tag">lorem</label>
+                <input type="checkbox" name="tags" id="lorem-tag" value="lorem" disabled>
+
+                <label for="color"></label>
+                <input type="color" id="color">
+
+                <button type="submit">Publish</button>
+            </fieldset>
+        </form>
         <section id="posts">
-            <!-- TODO build a form! -->
             <article class="post">
                 <h1>Leaves are cool</h1>
                 <p>
@@ -37,5 +70,6 @@
         </section>
         <aside></aside>
         <script src="app.js"></script>
+        <!-- <script src="events.js"></script> -->
     </body>
 </html>

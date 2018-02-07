@@ -80,4 +80,25 @@ for (let i = 0; i < posts.length; i++) {
     posts[i].publish();
 }
 
-// TODO add submit event listener to our form
+// TODO get data from form and put on DOM as new post
+const form = document.querySelector('form');
+
+// x - add submit event listener to our form
+form.addEventListener('submit', function () {
+    event.preventDefault();
+    console.log('consoles on submit!');
+
+    // x - get the data from the form
+    const title = document.getElementById('title').value;
+    console.log('the title they wrote', title);
+    console.log(this.title.value);
+
+    const content = this.text.value;
+    const tags = this.tags;
+    console.log('content', content);
+    console.log('tags', tags);
+
+    // x - create the article
+    const newPost = new Post (title, content);
+    newPost.publish();
+});
