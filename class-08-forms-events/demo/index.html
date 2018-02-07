@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Code Road</title>
+        <style>
+            #posts {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+
+            #posts article:not(.post) {
+                order: 1;
+            }
+
+            .post {
+                width: 700px;
+                border: solid black 1px;
+                padding: 1em;
+            }
+        </style>
+    </head>
+    <body>
+        <section id="posts">
+            <!-- TODO build a form! -->
+            <article class="post">
+                <h1>Leaves are cool</h1>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit alias est obcaecati odio doloremque 
+                    ex error nihil nulla consequuntur rem, iusto doloribus distinctio pariatur officia, et reprehenderit!
+                    Quis, aut est!
+                </p>
+                <ul>
+                    <li>monkeys</li>
+                    <li>leaves</li>
+                </ul>
+            </article>
+        </section>
+        <aside></aside>
+        <script src="app.js"></script>
+    </body>
+</html>
