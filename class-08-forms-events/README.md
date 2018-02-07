@@ -17,6 +17,7 @@
     - don't twiddle your thumbs for more than 15 minutes
     - write out steps in english (psuedo code)
     - break it into smaller tasks and test them!
+* Lecture questions: ask away! || make a list of "WTF SJ?"
 * Continuing one on ones
 
 ## Learning Objectives
