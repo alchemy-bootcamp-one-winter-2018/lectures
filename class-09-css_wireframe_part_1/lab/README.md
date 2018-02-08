@@ -7,7 +7,7 @@ Here's your other tasks for today:
 
 - Style up the public facing page (**index.html**) to make it appealing to customers.
 - Here are the requirements as listed in the original support doc:
-	1. A custom Google font for highlights
+	1. A Google font for headers or other important text
 	2. A specified standard san-serif web font for data (such as Arial, Verdana, or Helvetica)
 	3. A specified standard serif web font for text (such as Georgia, Times, etc.)
 	4. Specified different font colors for all three font usages
