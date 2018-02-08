@@ -21,6 +21,7 @@
 
 ## Notes
 * Code review
+    * [PR to Victor's Salmon Cookies](https://github.com/victorbofill/cookie-stand/pull/4/files)
 * Wireframes and layout
     * Plan a rough layout of your website
         * Think about groupings things for semantic and layout purposes
