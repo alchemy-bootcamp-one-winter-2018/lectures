@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Code Road</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="cats">SO MANY CATS</h1>
+    </header>
+
+    <section id="modal">
+        <form>
+            <fieldset>
+                <legend>New Post Information</legend>
+
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" minlength="3" required placeholder="Something Fun">
+
+                    <label for="content">Content</label>
+                    <textarea id="content" name="text" required>
+                        Hello world! Write something fun.
+                    </textarea>
+
+                    <label class="tag-label" for="cat-tag">
+                        <input type="checkbox" name="tags" id="cat-tag" value="cat">
+                        cat
+                    </label>
+                    
+                    <label class="tag-label" for="lorem-tag">
+                        <input type="checkbox" name="tags" id="lorem-tag" value="lorem">
+                        lorem
+                    </label>
+
+                <button type="submit">Publish</button>
+            </fieldset>
+        </form>
+    </section>
+
+    <section id="posts">
+        <article class="post">
+            <h1>Leaves are cool</h1>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit alias est obcaecati odio doloremque ex error nihil nulla consequuntur
+                rem, iusto doloribus distinctio pariatur officia, et reprehenderit! Quis, aut est!
+            </p>
+            <ul>
+                <li>monkeys</li>
+                <li>leaves</li>
+            </ul>
+        </article>
+    </section>
+
+    <div id="new-post">+</div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

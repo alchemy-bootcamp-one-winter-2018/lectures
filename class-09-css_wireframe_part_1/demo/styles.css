@@ -1,0 +1,60 @@
+
+/* posts */
+#posts {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.post {
+    width: 700px;
+    border: solid black 1px;
+    padding: 25px;
+    margin: 10px;
+
+    line-height: 25px;
+}
+
+/* form and friends*/
+form, #modal {
+    display: none;
+}
+
+form {
+    background-color: white;
+    padding: 30px;
+}
+
+form.open {
+    display: block;
+}
+
+fieldset {
+    width: 700px;
+    padding: 25px;
+    position: relative;
+}
+
+#new-post {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    font-size: 50px;
+    
+    padding: 20px;
+}
+
+#modal {
+    background-color: rgba(100,100,100,.8);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;   
+}
+
+#modal.open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
