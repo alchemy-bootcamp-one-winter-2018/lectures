@@ -9,8 +9,8 @@
 ### Schedule
 1. Announcements
 1. Code review
-1. Debugging
 1. CSS layout
+1. Debugging
 
 ### Announcements
 * Due Sunday: Quiz 5 & Deployed Salmon Cookies!
@@ -35,6 +35,8 @@
 * Write easy to understand code using best practices.
 
 ## Notes
+* Code Review
+    * PR to Tasha's: https://github.com/Tashazun/cookie-stand/pull/11
 * CSS 
     * fonts
         * font-sizes
