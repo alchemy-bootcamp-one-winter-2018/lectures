@@ -1,6 +1,7 @@
 'use strict';
 
 function Post (title,content,tags) {
+    if (title === 'dogs')  throw 'no dogs allowed';
     this.title = title;
     this.content = content;
     this.tags = tags || [];
@@ -78,7 +79,6 @@ const postC = new Post(
 const posts = [postA,postB,postC];
 for (let i = 0; i < posts.length; i++) {
     posts[i].publish();
-
 }
 
 const modal = document.getElementById('modal');
@@ -86,13 +86,17 @@ const form = document.querySelector('form');
 form.addEventListener('submit', function () {
     event.preventDefault();
 
+    // debugger;
     const title = document.getElementById('title').value;
     const content = this.text.value;
     // const tags = this.tags;
 
-    const newPost = new Post (title, content);
-
-    newPost.publish();
+    try {
+        const newPost = new Post (title, content);
+        newPost.publish();
+    } catch (err) {
+        console.error('haha', err);
+    }
 
     this.classList.remove('open');
     modal.classList.remove('open');
