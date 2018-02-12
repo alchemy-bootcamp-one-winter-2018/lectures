@@ -18,6 +18,9 @@
     * 70% on the final
     * teacher approval
 * Career Track pre-reqs: [list of concepts to know](https://github.com/alchemycodelab/javascript-career-track-prerequisites)
+* Career week!
+    * Devsign students are using main lab as class. Please use door marked with EXIT sign and keep noise to a minimum when walking through.
+    * For lab, the students will be available for pairing! Sign up on the farthest whiteboard.
 
 ## Learning Objectives
 * Track user interaction via clicks using event listeners and event handlers.
