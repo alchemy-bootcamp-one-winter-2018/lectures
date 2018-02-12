@@ -38,6 +38,10 @@
         * keywords throughout your content
         * html tags: title, meta description
     * stop search engines from indexing (or including) your site with the robots meta tag
+    * more things!
+        * https://moz.com/blog/rank-in-2018-seo-checklist
+        * https://searchenginewatch.com/2017/12/13/how-to-future-proof-your-seo-for-2018/
+        * https://moz.com/beginners-guide-to-seo
 
 * Demo: cuttlefish collecting game
     * OOP again! Mixing literals with constructor functions
