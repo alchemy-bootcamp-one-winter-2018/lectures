@@ -1,6 +1,7 @@
 const game = {
     cuttlefish: [],
     counter: 0,
+    board: document.getElementById('game-board'),
     start: function () {
 
         this.cuttlefish.push(
@@ -17,9 +18,7 @@ const game = {
 
         // show 3 random cuttlefish
         this.showFish();
-
-        const board = document.getElementById('game-board');
-        board.addEventListener('click', clickHandler);
+        this.board.addEventListener('click', clickHandler);
     },
     end: function () {
         this.board.removeEventListener('click', clickHandler);
@@ -85,6 +84,7 @@ function clickHandler () {
     // reselect and append new images
     game.clearBoard();
     game.showFish();
+    game.counter++;
     if (game.counter === 3) {
         game.end();
     }
