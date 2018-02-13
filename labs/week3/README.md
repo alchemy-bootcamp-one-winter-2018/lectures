@@ -62,6 +62,23 @@ Do today's work on a branch called `collect-votes`.
 
 **This is an individual assignment today, but you are free (heck, even encouraged) to collaborate with classmates if you want. Just be sure that if you do, be sure to make note of that collaboration in your README file.**
 
+
+### Day 12
+
+Your savvy marketing person has just informed you that just showing users the numbered data of the click percentages is not going to cut it. You need a visual representation to grab the user's attention.
+
+### Technical Goal
+
+- Using ChartJS, display your vote totals in a bar chart. If you want to try some additional chart types, do so with some of your alternate data that you have calculated from your vote results. The size and look of your chart is up to you, just be sure to put it in the area beneath the three images. 
+
+<!-- **Stretch goals**
+-  -->
+
+
+### *Remember to submit this link on canvas so that your work can be graded!*
+
+
+
 ## Submitting Your Assignment
 
 1. When your work is complete and ready for submission, open a Pull Request from `busmall-start` to `master`.
