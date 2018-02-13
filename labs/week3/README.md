@@ -67,12 +67,12 @@ Do today's work on a branch called `collect-votes`.
 
 Your savvy marketing person has just informed you that just showing users the numbered data of the click percentages is not going to cut it. You need a visual representation to grab the user's attention.
 
-### Technical Goal
+### Feature goal
 
 - Using ChartJS, display your vote totals in a bar chart. If you want to try some additional chart types, do so with some of your alternate data that you have calculated from your vote results. The size and look of your chart is up to you, just be sure to put it in the area beneath the three images. 
 
-<!-- **Stretch goals**
--  -->
+**Stretch goals**
+- Using the Canvas API, create a fun graphic or animation to play at the end of a survey so a user feels celebrated and appreciated.
 
 
 ### *Remember to submit this link on canvas so that your work can be graded!*
