@@ -23,6 +23,8 @@
     * DM to schedule
     * 3-6 is preferable
     * first come first served
+* Sign up for Devsign mentorship!!
+    * How was it yesterday?
 * Questions?
 
 ## Learning Objectives
