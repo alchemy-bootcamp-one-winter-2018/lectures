@@ -1,5 +1,6 @@
 const game = {
     cuttlefish: [],
+    counter: 0,
     start: function () {
 
         this.cuttlefish.push(
@@ -18,24 +19,11 @@ const game = {
         this.showFish();
 
         const board = document.getElementById('game-board');
-        board.addEventListener('click', function () {
-            const url = event.target.src;
-            if (!url) return;
-            
-            for(let i = 0; i < game.cuttlefish.length; i ++) {
-                const fish = game.cuttlefish[i];
-                const endOfUrl = url.slice( url.indexOf(fish.imageUrl), url.length );
-
-                if (endOfUrl === fish.imageUrl) {
-                    fish.timesCaught++;
-                    console.table(fish);
-                }
-            }
-
-            // reselect and append new images
-            game.clearBoard();
-            game.showFish();
-        });
+        board.addEventListener('click', clickHandler);
+    },
+    end: function () {
+        this.board.removeEventListener('click', clickHandler);
+        this.board.classList.add('game-over');
     },
     getRandomFish: function () {
         const selectedFishes = [];
@@ -80,6 +68,27 @@ const game = {
     }
 };
 
+function clickHandler () {
+    const url = event.target.src;
+    if (!url) return;
+    
+    for(let i = 0; i < game.cuttlefish.length; i ++) {
+        const fish = game.cuttlefish[i];
+        const endOfUrl = url.slice( url.indexOf(fish.imageUrl), url.length );
+
+        if (endOfUrl === fish.imageUrl) {
+            fish.timesCaught++;
+            console.table(fish);
+        }
+    }
+    
+    // reselect and append new images
+    game.clearBoard();
+    game.showFish();
+    if (game.counter === 3) {
+        game.end();
+    }
+}
 
 
 function Cuttlefish (name, imageUrl) {
