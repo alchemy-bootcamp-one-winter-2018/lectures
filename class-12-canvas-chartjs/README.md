@@ -19,6 +19,10 @@
     * JS instruction = engineered vs CSS instruction = not so much
     * thanks to TA's!
     * kudos for self awareness (:
+* Optional one on ones w/ SJ
+    * DM to schedule
+    * 3-6 is preferable
+    * first come first served
 * Questions?
 
 ## Learning Objectives
