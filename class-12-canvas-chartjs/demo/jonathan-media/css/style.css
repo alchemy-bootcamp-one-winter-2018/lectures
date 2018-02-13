@@ -27,6 +27,11 @@ audio {
   width: 100%;
 }
 
+#game-board {
+    z-index: 2;
+    position: relative;
+}
+
 #game-board.game-over img {
     opacity: .5;
     cursor: default;
@@ -44,13 +49,16 @@ audio {
     cursor: pointer;
 }
 
-#background {
+#bubbles {
     position: absolute;
     z-index: -1;
 }
 
 #chart {
+    margin-top: 200px;
     display: block;
     width: 600px;
-    margin-left: 55%;
+    /* width: 600px;
+    margin-left: 55%; */
 }  
+

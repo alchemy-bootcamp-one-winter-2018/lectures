@@ -19,10 +19,74 @@ const game = {
         // show 3 random cuttlefish
         this.showFish();
         this.board.addEventListener('click', clickHandler);
+
+        const canvas = document.getElementById('bubbles');
+        // ctx is short for context
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = 'blue';
+        ctx.fillRect(0,0,ctx.canvas.width,ctx.canvas.height);
+
+        setInterval(draw,1000);
+
+        function draw () {
+            ctx.fillStyle = 'blue';
+            ctx.fillRect(0,0,ctx.canvas.width,ctx.canvas.height);
+
+            for (let t = 0; t < 5; t++) {
+                const randomSize = Math.floor(Math.random() * t * 10);
+                for (let i = 0; i < 3; i++) {
+                    const randomX = Math.floor(Math.random() * (700 - 100));
+                    ctx.beginPath();
+                    ctx.ellipse(randomX, ctx.canvas.height - t * 70, randomSize, randomSize, 45 * Math.PI/180, 0, 2 * Math.PI);
+                    ctx.strokeStyle = 'white';
+                    ctx.stroke();
+                };
+            }
+        }
+
     },
     end: function () {
         this.board.removeEventListener('click', clickHandler);
         this.board.classList.add('game-over');
+        this.drawChart();
+    },
+    drawChart: function () {
+        // get the canvas to show chart
+        const chartCanvas = document.getElementById('chart');
+        const chartCtx = chartCanvas.getContext('2d');
+
+
+        // todo create arrays with just names and just timesClicked
+        const names = [];
+        const timesClicked = [];
+        for(let i = 0; i < this.cuttlefish.length; i ++) {
+            names.push(this.cuttlefish[i].name);
+            timesClicked.push(this.cuttlefish[i].timesCaught);
+        }
+
+        console.log('names', names);
+        console.log('timesClicked', timesClicked);
+
+        const chart = new Chart(chartCtx, { // eslint-disable-line
+            type: 'bar',
+            data: {
+                labels: names,
+                datasets: [{
+                    label: 'number of times caught',
+                    data: timesClicked
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero:true
+                        }
+                    }]
+                }
+            }
+        });
+
     },
     getRandomFish: function () {
         const selectedFishes = [];
@@ -70,7 +134,7 @@ const game = {
 function clickHandler () {
     const url = event.target.src;
     if (!url) return;
-    
+
     for(let i = 0; i < game.cuttlefish.length; i ++) {
         const fish = game.cuttlefish[i];
         const endOfUrl = url.slice( url.indexOf(fish.imageUrl), url.length );
@@ -80,11 +144,12 @@ function clickHandler () {
             console.table(fish);
         }
     }
-    
+
     // reselect and append new images
     game.clearBoard();
     game.showFish();
     game.counter++;
+
     if (game.counter === 3) {
         game.end();
     }
