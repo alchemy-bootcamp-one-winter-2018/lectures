@@ -3,17 +3,36 @@ const game = {
     counter: 0,
     board: document.getElementById('game-board'),
     start: function () {
-        this.cuttlefish.push(
-            new Cuttlefish('cool fish','coolfish.jpg'),
-            new Cuttlefish('cuttle fish','cuttlefish2.jpg'),
-            new Cuttlefish('cuttle fish','cuttlefish5.jpg'),
-            new Cuttlefish('cuttle fish','cuttlefish8.jpg'),
-            new Cuttlefish('cuttle fish','cuttlefish9.png'),
-            new Cuttlefish('not a fish','nofish.jpg'),
-            new Cuttlefish('red fish','redfish.jpg'),
-            new Cuttlefish('stripes fish','stripes.jpg'),
-            new Cuttlefish('also stripes fish','stripes2.jpg')
-        );
+
+
+        // if will run if they are coming back 
+        if (localStorage.getItem('fish')) {
+            // get array of obj literals of fish
+            const fishObjs = JSON.parse(localStorage.getItem('fish')); // [{name,img,num},{name,img,num},{name,img,num}]
+
+            for (let i = 0; i < fishObjs.length; i ++) {
+                const fishObj = fishObjs[i]; // {name,img,num}
+
+                // Cuttlefish (name, imageUrl, timesCaught)
+                const fish = new Cuttlefish(fishObj.name, fishObj.imageUrl, fishObj.timesCaught);
+                this.cuttlefish.push(fish);
+            }
+        } else {
+            // else will run if they are a first time visitor
+            this.cuttlefish.push(
+                new Cuttlefish('cool fish','coolfish.jpg', 0),
+                new Cuttlefish('cuttle fish','cuttlefish2.jpg', 0),
+                new Cuttlefish('cuttle fish','cuttlefish5.jpg', 0),
+                new Cuttlefish('cuttle fish','cuttlefish8.jpg', 0),
+                new Cuttlefish('cuttle fish','cuttlefish9.png', 0),
+                new Cuttlefish('not a fish','nofish.jpg', 0),
+                new Cuttlefish('red fish','redfish.jpg', 0),
+                new Cuttlefish('stripes fish','stripes.jpg', 0),
+                new Cuttlefish('also stripes fish','stripes2.jpg', 0)
+            );
+        }
+
+        console.log(this.cuttlefish);
 
         // show 3 random cuttlefish
         this.showFish();
@@ -48,6 +67,10 @@ const game = {
         this.board.removeEventListener('click', clickHandler);
         this.board.classList.add('game-over');
         this.drawChart();
+
+
+        // save updated data to LS
+        localStorage.setItem('fish', JSON.stringify(this.cuttlefish));
     },
     drawChart: function () {
         // get the canvas to show chart
@@ -155,10 +178,10 @@ function clickHandler () {
 }
 
 
-function Cuttlefish (name, imageUrl) {
+function Cuttlefish (name, imageUrl, timesCaught) {
     this.name = name;
     this.imageUrl = imageUrl;
-    this.timesCaught = 0;
+    this.timesCaught = timesCaught;
 }
 
 Cuttlefish.prototype.render = function () {
