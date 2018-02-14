@@ -75,8 +75,10 @@
     * User Experience
         - elements that affect how our website makes a user feel
             - the way forms, buttons, links look and act
-            - other aspects such as content, branding
+            - other aspects such as content, branding, 404 pages
                 - [onboarding teardowns](https://www.useronboard.com/onboarding-teardowns/)
+                - [portraying empty states](https://blog.innertrends.com/blank-state-examples/)
+                - [example empty states](http://emptystat.es)
         - general goal:
             - influence visitor's perception of brand or consumption of product
 * local storage
