@@ -1,8 +1,17 @@
-# Assignment Overview: Lab for Class 11
+# BusMall
 
-## BusMall
+### Table of contents
+1. [Backstory](#Backstory)
+    1. [Problem Domain](#Problem-Domain)
+    1. [User Stories](#User-Stories)
+1. [Daily Goals](#Daily-Goals)
+    1. [Day 11](#Day-11)
+    1. [Day 12](#Day-12)
+    1. [Day 13](#Day-13)
+1. [Submitting Your Assignment](#Submitting-Your-Assignment)
 
-### Backstory
+
+## Backstory
 
 You've been hired by a startup called BusMall, whose product is similar to the SkyMall catalog found in the seatback pockets on airplanes: a catalog of assorted high-markup products provided to a captive audience seeking a mental escape from the drudgery of travel. But in this case, BusMall catalogs are placed on TriMet transit system buses.
 
@@ -29,6 +38,8 @@ Reminder: user stories typically take the form of, "As X, I want Y, so that Z" b
 A wise student would take about 30-45 minutes to work on the user stories and also draft a technical plan for the project (a detailed to-do list of things to make, step by step and tested at each stage) before getting into the code. That time spent in thought and planning will make the code flow a lot faster. **Give yourself a series of little problems to solve (rather an a ginormous thing that you just wade through and poke at).**
 
 Plan your work, and work your plan.
+
+------
 
 ## Daily Goals
 
@@ -75,8 +86,21 @@ Your savvy marketing person has just informed you that just showing users the nu
 - Using the Canvas API, create a fun graphic or animation to play at the end of a survey so a user feels celebrated and appreciated.
 
 
-### *Remember to submit this link on canvas so that your work can be graded!*
 
+### Day 13
+
+The Bus Mall marketing team is getting frustrated. Every time they conduct a focus group, their data from last time is gone! They want to build a large collection of data - and see that compounded data reflected in the end graph.
+
+### Feature Goal
+
+- Give your BusMall app some persistence by using local storage to store your voting data! The goal is to have all of your click data persist through a page refresh or through completely closing the browser. They want to see a cumulative tally of votes (so after three people have voting sessions, the chart would display all three of their results totaled).
+
+**STRETCH GOALS**
+- Display the current user's end tally as well as the cumulative total of votes. You could do this in a new chart or in the same one.
+- Let the marketer's clear the data so they can start a new session at any time.
+- Think about the UX for the marketers as well as the focus group participants. How could you improve your current website? Implement a couple of your ideas.
+
+### *Remember to submit this link in the Canvas assignment*
 
 
 ## Submitting Your Assignment
