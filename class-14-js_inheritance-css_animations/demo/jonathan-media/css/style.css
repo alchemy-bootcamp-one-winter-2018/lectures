@@ -47,6 +47,28 @@ audio {
 #game-board img {
     height: 100px;
     cursor: pointer;
+
+    transition: transform 1s ease;
+    transform-origin: left bottom;
+
+    /* animation-name: swim;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; */
+    
+    /* animation-fill-mode: forwards; */
+}
+
+#game-board img.swim {
+    animation: swim 2s 5s infinite alternate;
+}
+
+#game-board img.fast {
+    animation-duration: 1s;    
+}
+
+#game-board img.slow {
+    animation-duration: 4s;    
 }
 
 #bubbles {
@@ -62,3 +84,24 @@ audio {
     margin-left: 55%; */
 }  
 
+
+/* animations! */
+
+/* transitions */
+#game-board img:hover {
+    /* height: 50px; */
+    transform: scale(.5);
+}
+
+/* keyframes */
+@keyframes swim {
+    0% {
+        margin-left: 0;
+    }
+    50% {
+        margin-left: -30px;
+    }
+    100% {
+        margin-left: 100px;
+    }
+}

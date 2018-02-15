@@ -4,9 +4,43 @@ const game = {
     board: document.getElementById('game-board'),
     numFish: 3,
     numRounds: 3,
+
     start: function () {
+        this.getSettings();
+        this.getFish();
 
+        // show 3 random cuttlefish
+        this.showFish();
 
+        this.board.addEventListener('click', clickHandler);
+
+        this.drawBackground();
+    },
+    end: function () {
+        this.board.removeEventListener('click', clickHandler);
+        this.board.classList.add('game-over');
+        this.drawChart();
+
+        // save updated data to LS
+        localStorage.setItem('fish', JSON.stringify(this.cuttlefish));
+    },
+
+    getSettings: function () {
+        // get the settings if there are any
+        if (localStorage.getItem('settings')) {
+            const savedSettings = JSON.parse(localStorage.getItem('settings'));
+            console.log(savedSettings);
+
+            this.numFish = parseInt(savedSettings.numFish);
+            this.numRounds = parseInt(savedSettings.numRounds);
+            console.log(this);
+        } 
+        // else {
+        //     this.numFish = 3;
+        //     this.numRounds = 3;
+        // }
+    },
+    getFish: function () {
         // if will run if they are coming back 
         if (localStorage.getItem('fish')) {
             // get array of obj literals of fish
@@ -35,11 +69,8 @@ const game = {
         }
 
         console.log(this.cuttlefish);
-
-        // show 3 random cuttlefish
-        this.showFish();
-        this.board.addEventListener('click', clickHandler);
-
+    },
+    drawBackground: function () {
         const canvas = document.getElementById('bubbles');
         // ctx is short for context
         const ctx = canvas.getContext('2d');
@@ -63,17 +94,8 @@ const game = {
                 };
             }
         }
-
     },
-    end: function () {
-        this.board.removeEventListener('click', clickHandler);
-        this.board.classList.add('game-over');
-        this.drawChart();
 
-
-        // save updated data to LS
-        localStorage.setItem('fish', JSON.stringify(this.cuttlefish));
-    },
     drawChart: function () {
         // get the canvas to show chart
         const chartCanvas = document.getElementById('chart');
@@ -179,19 +201,4 @@ function clickHandler () {
     }
 }
 
-
-function Cuttlefish (name, imageUrl, timesCaught) {
-    this.name = name;
-    this.imageUrl = imageUrl;
-    this.timesCaught = timesCaught;
-}
-
-Cuttlefish.prototype.render = function () {
-    const ele = document.createElement('img');
-    ele.src =  `media/images/${this.imageUrl}`;
-    ele.setAttribute('alt', this.name);
-    return ele;
-};
-
 game.start();
-
