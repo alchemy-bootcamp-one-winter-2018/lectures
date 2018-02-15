@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Inheritence</title>
+  </head>
+  <body>
+    <h1>YAY HTML!</h1>
+    <script>
+
+        /* 
+            JS Inheritence allows us to create objects that inherit other objects properties and methods
+            
+            Array.prototype
+            Object.prototype
+
+            Array.hasOwnProperty
+
+            DOM Node object
+            DOME Element object .childNodes
+
+        */
+
+        // Store constructor
+        function Store ( name, location, product ) {
+            this.name = name;
+            this.location = location;
+            this.product = product;
+            this.owner = 'SJ';
+        }
+
+        Store.prototype.orderStock = function () {
+            console.log( 'Just ordered some ' + this.product + ' for ' + this.name );
+        }
+
+        Store.prototype.announceSale = function () {
+            var str = this.name + ' IS HAVING A SALE!!!';
+            console.log( str.toUpperCase() );
+        }  
+
+        /* allows us to make instances of a store with the given properties */
+
+        var cookies = new Store ( 'cookie store', 'alberta', 'cookies' );
+        cookies.orderStock();
+        cookies.ingredients = [];
+
+        var records = new Store ( 'record store', 'alberta', 'records' );
+        records.orderStock();
+        records.genres =[];
+
+
+
+        /* But if we want to make multiple cookie stores and record stores and have them behave a little differently... */
+
+        // Record Store constructor
+        function RecordStore ( name, location, product ) {
+            Store.call( this, name, location, product );
+        }
+
+        RecordStore.prototype = Object.create( Store.prototype ); // sets Store object as "parent" or prototype & gives us access to owner
+        RecordStore.prototype.constructor = RecordStore; // resets our constructor property to what it should be
+        
+        
+        // // Cookie Store constructor
+        function CookieStore ( name, location, product, ingredients ) {
+            Store.call( this, name, location, product );
+            this.ingredients = ingredients;
+        }
+
+        CookieStore.prototype = Object.create( Store.prototype );
+        CookieStore.prototype.constructor = CookieStore;
+
+        CookieStore.prototype.orderStock = function () {
+            console.log( 'ordering ' + this.ingredients + ' to make ' 
+                            + this.product + ' for ' + this.name );
+        }
+
+
+
+        var cookies1 = new CookieStore( 'cookiez', 'pearl', 'cookies', 'chocolate, flour, eggs' );
+        cookies1.orderStock();
+        
+        var records1 = new RecordStore( 'recordz', 'SE', 'records' );
+        records1.orderStock();
+        records1.announceSale();
+
+    </script>
+  </body>
+</html>

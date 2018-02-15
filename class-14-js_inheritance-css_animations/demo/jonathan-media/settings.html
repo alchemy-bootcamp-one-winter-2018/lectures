@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cuttlefish</title>
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main>
+    <form id="settings-form">
+        <fieldset>
+        <legend>Collect Cuttlefish Settings</legend>
+        <div>
+            <label for="num-fish">Number of Fish</label>
+            <input name="num-fish" type="number" min="1" max="9">
+            <label for="num-rounds">Number of Rounds</label>
+            <input name="num-rounds" type="number" min="5" max="20">
+        </div>
+        <button type="submit">Save</button>
+        </fieldset>
+    </form>
+  </main>
+  <script src="js/settings.js"></script>
+</body>
+</html>

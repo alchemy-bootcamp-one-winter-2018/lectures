@@ -100,6 +100,18 @@ The Bus Mall marketing team is getting frustrated. Every time they conduct a foc
 - Let the marketer's clear the data so they can start a new session at any time.
 - Think about the UX for the marketers as well as the focus group participants. How could you improve your current website? Implement a couple of your ideas.
 
+### Day 14
+
+The research team is excited about all the work you've accomplished! They have one more request: an admin settings page, where they can easily change how many images are shown and how many rounds a survey lasts. For images shown, they want a range of 2 to 5. For the survey rounds, they want a range of 5-20.
+
+### Feature Goal
+
+- Add another html page to your website: settings.html. It should have similar styling to your main page, with a form as its content. The form should have two number inputs for: the number of images shown, and the number of rounds. This data should be saved in localStorage and used the next time someone takes a survey.
+
+**STRETCH GOALS**
+- Add some animations to your survey so that survey takers have an enjoyable experience.
+- Add a setting that can show/hide the ending charts.
+
 ### *Remember to submit this link in the Canvas assignment*
 
 
