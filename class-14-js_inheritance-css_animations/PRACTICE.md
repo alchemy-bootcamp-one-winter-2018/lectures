@@ -1,6 +1,5 @@
 # localStorage practice
 
-### Option A
 Create a quiz that asks a visitor 1 to 3 questions and tells them what JS function they are.
 - The criteria for determining what function they are is completely up to you.
 - You can write an HTML form, or use `prompt()`; whichever feels doable within the time constraint.
