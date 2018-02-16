@@ -4,7 +4,7 @@
     <title>This</title>
   </head>
   <body>
-    <h1>This</h1>
+    <h1 id="this">This</h1>
     <p>is a keyword that refers to <strong>the object that called the function</strong> it's in</p>
     
     <h1>Scope</h1>
@@ -13,24 +13,97 @@
     <p><pre><code>var</code></pre> is function scoped: to the nearest function's {}</p>
     <p>all of the above are lexically scoped: where in the body of our code we write 'em</p>
     <script>
-
-        // this
-            // keyword that refers to the object that called the function we're in
-        const mamaBird = {
-            stomach: [],
-            eat: function (food) {
-                this.stomach.push(food);
-            }
-        };
-
-        const babyBird = {};
-        babyBird.getFed = mamaBird.eat; 
-
         // scope
             // when a variable is available
             // const and let: {}
             // var: function {}
             // all: lexically scoped
+
+        if (true) {
+            const trex = 'roar';
+            let triceratops = 'ROARRRRR';
+            console.log('mouse', mouse);
+        } else {
+            console.log('trex', trex);
+            console.log('tri', triceratops);
+            console.log('mouse', mouse);
+        }
+
+        // for (let i = 0; i < 3; i ++) {
+        //     console.log('inside for loop', i);
+        //     console.log('mouse', mouse);
+        // }
+
+        // console.log('outside for loop', i);
+
+        // while () {}
+
+
+        const owl = 'hoo';
+        let bird = 'tweet';
+        var mouse = 'scared';
+
+        yell();        
+
+
+        function yell () {
+            console.log('mouse', mouse);
+            var cat = 'meow';
+            const dog = 'woof';
+
+            if (true) {
+                var rat = '?????';
+                console.log('inside if statement in yell() ------------------------')
+                console.log('rat', rat);
+                console.log('cat', cat);
+                console.log('dog', dog);
+
+                console.log('owl', owl);
+                console.log('bird', bird);
+                console.log('mouse', mouse);
+            }
+            
+            console.log('rat', rat);
+            console.log('cat', cat);
+            console.log('dog', dog);
+        }
+        
+        // console.log('rat', rat);
+        // console.log('cat', cat);
+        // console.log('dog', dog);
+
+
+
+        // this
+            // keyword that refers to the object that called the function we're in
+        
+        function fly () {
+            console.log('this is', this);
+            console.log(this.name, ' is flyinnngg');
+        }
+
+        fly(); // this 
+
+        const mamaBird = {
+            name: 'sally',
+            soar: fly
+        };
+
+        mamaBird.soar();
+
+       
+        const thisH1 = document.querySelector('#this'); // { title: '', textContent: 'This'}
+
+        thisH1.addEventListener('click', function () {
+            console.log('this isnide of eventhandlr', this);
+
+            fly();
+        });
+        
+        // we're effectively adding a method to our header that runs when it hears a click!
+        // thisH1.clickHandler = function () {
+        //     console.log('this isnide of eventhandlr', this);
+        // }; // the function we pass in;
 
     </script>
   </body>

@@ -56,8 +56,10 @@
             hCell.innerText = 'Name';
             headerRow.appendChild(hCell);
             table.appendChild(headerRow);
-
-            data.forEach(function (person) {
+            
+            // data.forEach(function (person) {
+            for (let i = 0; i < data.length; i++) {
+                const person = data[i];
                 const newRow = document.createElement('tr');
                 const nameCell = document.createElement('td');
                 nameCell.innerText = person.name;
@@ -68,8 +70,9 @@
                     newRow.appendChild(cell);
                 }
                 table.appendChild(newRow);
-            });
+            };
         }
+
 
 
 
@@ -90,6 +93,11 @@
                 $('#jq').append($personRow);
             });
         }
+
+
+
+
+
 
 
 
