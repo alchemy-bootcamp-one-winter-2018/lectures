@@ -112,6 +112,15 @@ The research team is excited about all the work you've accomplished! They have o
 - Add some animations to your survey so that survey takers have an enjoyable experience.
 - Add a setting that can show/hide the ending charts.
 
+### Day 15
+
+Finish up any remaining features and deploy! The Bus Mall team is super excited to use your app for their research.
+
+### Feature Goal
+
+- Finish and remaining features for Bus Mall and deploy to GitHub Pages. 
+
+
 ### *Remember to submit this link in the Canvas assignment*
 
 

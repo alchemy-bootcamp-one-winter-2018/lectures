@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery Table</title>
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <style>
+        table {
+            margin: 30px;
+        }
+
+        th, td {
+            border: solid gray 1px;
+            padding: 2px 5px;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>YAY jQuery!</h1>
+    <section>
+        <table id="js"></table>
+        <table id="jq"></table>
+    </section>
+    <script>
+
+
+
+        // data
+        const data = [
+            { name: 'SJ', numStickers: randStickers() },
+            { name: 'Steven', numStickers: randStickers() },
+            { name: 'Kate', numStickers: randStickers() },
+            { name: 'Cynthia', numStickers: randStickers() },
+            { name: 'Stephanie', numStickers: randStickers() },
+            { name: 'Mark', numStickers: randStickers() },
+            { name: 'Haley', numStickers: randStickers() },
+            { name: 'Joe', numStickers: randStickers() },
+            { name: 'Andrew', numStickers: randStickers() },
+            { name: 'Meryl', numStickers: randStickers() },
+            { name: 'Louis', numStickers: randStickers() }
+        ];
+
+
+        buildWithJQ();
+        buildWithJS();
+
+
+        // build a table with JavaScript
+        function buildWithJS () {
+            const table = document.getElementById('js');
+
+            const headerRow = document.createElement('tr');
+            const hCell = document.createElement('th');
+            hCell.innerText = 'Name';
+            headerRow.appendChild(hCell);
+            table.appendChild(headerRow);
+
+            data.forEach(function (person) {
+                const newRow = document.createElement('tr');
+                const nameCell = document.createElement('td');
+                nameCell.innerText = person.name;
+                newRow.appendChild(nameCell);
+                for (let i = 0; i < person.numStickers; i ++){
+                    const cell = document.createElement('td');
+                    cell.innerText = randEmoji();
+                    newRow.appendChild(cell);
+                }
+                table.appendChild(newRow);
+            });
+        }
+
+
+
+        // build a table with jQuery
+        function buildWithJQ () {
+            const $headerCell = $('<th/>').text('Name');
+            const $headerRow = $('<tr/>').append($headerCell);
+            $('#jq').append($headerRow);
+
+            data.forEach((person) => {
+                const $personRow = $('<tr/>');
+                $personRow.append($('<td/>').text(person.name));
+
+                for (let i = 0; i < person.numStickers; i ++) {
+                    $personRow.append($('<td/>').text(randEmoji()));
+                }
+
+                $('#jq').append($personRow);
+            });
+        }
+
+
+
+        // get random things
+        function randStickers () {
+            return Math.floor(Math.random() * 20);
+        }
+
+        function randEmoji () {
+            const emojis = ['🌞', '😎', '💻', '🏔️', '🤷', '🍎', '🐶'];
+            const randI = Math.floor(Math.random() * 7);
+            return emojis[randI];
+        }
+    </script>
+
+  </body>
+</html>

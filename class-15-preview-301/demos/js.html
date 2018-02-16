@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>This</title>
+  </head>
+  <body>
+    <h1>This</h1>
+    <p>is a keyword that refers to <strong>the object that called the function</strong> it's in</p>
+    
+    <h1>Scope</h1>
+    <p>is when a variable is available for use</p>
+    <p><pre><code>const</code></pre> and <pre><code>let</code></pre> are block scoped: to the nearest {}</p>
+    <p><pre><code>var</code></pre> is function scoped: to the nearest function's {}</p>
+    <p>all of the above are lexically scoped: where in the body of our code we write 'em</p>
+    <script>
+
+        // this
+            // keyword that refers to the object that called the function we're in
+        const mamaBird = {
+            stomach: [],
+            eat: function (food) {
+                this.stomach.push(food);
+            }
+        };
+
+        const babyBird = {};
+        babyBird.getFed = mamaBird.eat; 
+
+        // scope
+            // when a variable is available
+            // const and let: {}
+            // var: function {}
+            // all: lexically scoped
+
+    </script>
+  </body>
+</html>
