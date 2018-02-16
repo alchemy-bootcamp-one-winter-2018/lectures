@@ -17,10 +17,11 @@ Your grade is based on your individual effort and your project's technical merit
     * Uses semantic markup whenever possible
  * **Good and proper use of CSS**
     * Clear, readable, and efficient styles
-    * Layout on various screen sizes like desktop and mobile
-    * Well organized file structure.
+    * Include a CSS reset like Normalize
+    * Well organized file structure
  * **Good and proper use of JavaScript**
     * Clear, readable, and efficient code
+    * Uses Object Oriented patterns
     * Global variables and functions are kept to a minimum
     * Responds to user events
     * Contains no unnecessary code
