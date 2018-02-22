@@ -23,6 +23,6 @@
     * Decide who's machine will present the app on the projector, test it, and then test a second computer… just in case.
 
 4. Overall presentation script:
-    * 5 minutes - Intro/demo
-    * 3 minutes per person - Technical challenge in the code
+    * 7-10 minutes - Intro/demo
+    * 3-5 minutes per person - Technical challenge in the code
     * Q&A
