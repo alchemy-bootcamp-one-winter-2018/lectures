@@ -18,11 +18,7 @@
          * You can talk about a problem or challenge you figured out, something new you learned, or something that finally started to click during project week.
          * Do not wing this. Have something in mind before presenting and know what you want to say.
          * Showing code is not mandatory, but if you do, don't walk us line by line.
+   1. Ask for questions after everyone has finished sharing.
 
 3. Rehearse your presentation:
     * Decide who's machine will present the app on the projector, test it, and then test a second computer… just in case.
-
-4. Overall presentation script:
-    * 7-10 minutes - Intro/demo
-    * 3-5 minutes per person - Technical challenge in the code
-    * Q&A
